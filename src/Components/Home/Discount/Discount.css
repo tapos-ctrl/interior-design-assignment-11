@@ -1,0 +1,11 @@
+.discount{
+    height: 400px;
+    background-image: url('../../../images/discount-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.discount-offer img{
+    width:15em;
+    height: 8em;
+    margin: 1.5em 0px 0px 14em;
+}

@@ -1,0 +1,22 @@
+.header-main{
+    margin-top:50px;
+    height:00px;
+}
+.view-more-btn{
+    background:rgb(1, 204, 255);
+    border-radius: 50px;
+    width: 200px;
+    outline: none;  
+    border: none;
+}
+.header-main h1{
+    font-weight: 750;
+    font-size: 3em;
+    
+}
+.header-main span{
+    color:rgb(246, 202, 7)
+}
+.header-main p{
+    font-size: 25px;
+}

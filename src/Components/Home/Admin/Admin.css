@@ -1,0 +1,10 @@
+.admin-navbar{
+
+    background:silver;
+}
+.admin-details{
+    background: rgb(219, 219, 219);
+    display: block;
+    border-radius: 5px;
+    width:850px;
+}

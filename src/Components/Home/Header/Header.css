@@ -1,0 +1,9 @@
+.nav-list{
+    text-align: right;
+}
+.header{
+    background-image: url('../../../images/background.jpg');
+    height: 40em;
+    background-position: center;
+}
+

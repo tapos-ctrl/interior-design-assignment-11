@@ -1,0 +1,39 @@
+.adminNavbar{
+    margin-right: 0px;
+    background-color: #0064FE;
+    height: 500px;
+    padding-top: 30px;
+    padding-right: 35px;
+
+    
+
+}
+.adminNavbar ul li{
+    list-style: none;
+    text-align: left;
+    
+    color:rgb(0, 0, 0);
+    
+}
+.adminNavbar ul li a{
+    padding: 15px 20px;
+    /* margin-top:3px ; */
+    color:rgb(255, 254, 254);
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.adminNavbar ul li a:hover{
+    background-color: #035AE1;
+
+}
+.adminNavbar h4{
+    text-align: left;
+    margin-left:50px;
+    font-weight: 800;
+    
+}
+.navbar-icon {
+    font-size:20px;
+    margin-right: 10px;
+}

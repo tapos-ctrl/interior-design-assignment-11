@@ -1,0 +1,22 @@
+.navbar-background{
+    background:gray;
+    display:block;
+    width:100%;
+    position:fixed;
+}
+.nav-bar-icon{
+    width:20px;
+}
+.nav-list{
+    flex-grow: 0 !important;
+}
+.navbar-toggler{
+    outline:none !important;
+}
+.navbar-nav{
+    float: right;
+}
+.nav-item Link{
+    color: rgb(18, 247, 18);
+}
+

@@ -1,0 +1,19 @@
+.footer{
+    background:rgba(19, 19, 19, 0.918);
+    color:white;
+}
+.footer ul li{
+    list-style:none;
+}
+.footer-copyright p{
+
+}
+.footer-copyright{
+    background:black;
+    padding:20px;
+    color:white;
+}
+.social-icon{
+    font-size:30px;
+    margin:20px  15px 0px 15px;
+}
