@@ -24,7 +24,7 @@ const AddService = () => {
         formData.append('sName', info.sName);
         formData.append('price', info.price);
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://blooming-gorge-51801.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

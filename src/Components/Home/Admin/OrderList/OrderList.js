@@ -11,7 +11,7 @@ const OrderList = () => {
   const [order, setOrder] = useState({})
   console.log(loggedInUser.email);
   useEffect(() => {
-    fetch('http://localhost:5000/orders?email='+loggedInUser.email)
+    fetch('https://blooming-gorge-51801.herokuapp.com/orders?email='+loggedInUser.email)
     .then(res => res.json())
     .then(data =>setOrder(data))
   }, [loggedInUser])

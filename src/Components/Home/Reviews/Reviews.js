@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import alexender from '../../../images/man-1.jpg';
-import john from '../../../images/man-2.jpg';
-import silvia from '../../../images/man-3.jpg';
 import Review from '../Review/Review';
 import './Reviews.css'
 const Reviews = () => {

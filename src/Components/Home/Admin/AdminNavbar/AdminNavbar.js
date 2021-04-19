@@ -34,9 +34,7 @@ const AdminNavbar = () => {
                     </li>
                     <li>
                         <Link class="nav-link" to="/allOrderList"><FontAwesomeIcon className="navbar-icon" icon={faListOl} />All Order List</Link>
-                    </li>
-                    
-                    
+                    </li>                    
                 </ul>
             </div>
         </div>
