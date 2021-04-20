@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './AdminNavbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFirstOrder } from '@fortawesome/free-brands-svg-icons';
 import { faListOl, faPlus, faTasks, faTrash, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import UserContext from '../../../../App'
 const AdminNavbar = () => {
+
+    const [loggedInUser, setLoggedInUser] = UseContext(UserContext);
+    const [isAdmin, setIsAdmin] = useState(false);
+
+    useEffect(() => {
+        fetch("https://blooming-gorge-51801.herokuapp.com/isAdmin", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: loggedInUser.email })
+        })
+            .then(res => res.json())
+            .then(data => setIsAdmin(data))
+    }, [])
+
+
     return (
         <div className="adminNavbar ">
             <div class="container adminNavbar">
@@ -19,22 +35,26 @@ const AdminNavbar = () => {
                         <Link class="nav-link" to="/dashboard"><FontAwesomeIcon className="navbar-icon" icon={faTasks} />Dashboard</Link>
                     </li>
                     <li>
+                        <Link class="nav-link" to="/addReview"><FontAwesomeIcon className="navbar-icon" icon={faUserPlus} />Add Review</Link>
+                    </li>
+                    <li>
+                        <Link class="nav-link" to="/orderList"><FontAwesomeIcon className="navbar-icon" icon={faListOl} />Order List</Link>
+                    </li>
+
+                   { isAdmin && <div>
+                    <li>
                         <Link class="nav-link" to="/addService"><FontAwesomeIcon className="navbar-icon" icon={faPlus} />Add Service</Link>
                     </li>
                     <li>
                         <Link class="nav-link" to="/manageService"><FontAwesomeIcon className="navbar-icon" icon={faTrash} />Manage Service</Link>
                     </li>
                     <li>
-                        <Link class="nav-link" to="/addReview"><FontAwesomeIcon className="navbar-icon" icon={faUserPlus} />Add Review</Link>
-                    </li><li>
                         <Link class="nav-link" to="/addAdmin"><FontAwesomeIcon className="navbar-icon" icon={faUserPlus} />Add Admin</Link>
                     </li>
                     <li>
-                        <Link class="nav-link" to="/orderList"><FontAwesomeIcon className="navbar-icon" icon={faListOl} />Order List</Link>
-                    </li>
-                    <li>
                         <Link class="nav-link" to="/allOrderList"><FontAwesomeIcon className="navbar-icon" icon={faListOl} />All Order List</Link>
-                    </li>                    
+                    </li> 
+                    </div>}             
                 </ul>
             </div>
         </div>
