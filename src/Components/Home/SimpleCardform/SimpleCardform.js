@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import './SimpleCardform.css';
 
-const SimpleCardForm = ({handlePayment}) => {
+const SimpleCardForm = ({ handlePayment }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [paymentError, setPaymentError] = useState(null);
@@ -23,7 +24,7 @@ const SimpleCardForm = ({handlePayment}) => {
     const cardElement = elements.getElement(CardElement);
 
     // Use your card Element with other Stripe.js APIs
-    const {error, paymentMethod} = await stripe.createPaymentMethod({
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: 'card',
       card: cardElement,
     });
@@ -39,20 +40,25 @@ const SimpleCardForm = ({handlePayment}) => {
   };
 
   return (
-<div>
-<form onSubmit={handleSubmit}>
-      <CardElement />
-      <button type="submit" disabled={!stripe}>
-        Pay
+    <div className="container">
+      <div className="row">
+        <div className="simple-card">
+          <form onSubmit={handleSubmit}>
+            <CardElement />
+            <button type="submit" disabled={!stripe}>
+              Pay
       </button>
-    </form>
-    {
-      paymentError && <p style={{color:'red'}}>{paymentError}</p>
-    }
-    {
-      paymentSuccess && <p style={{color:'green'}}>Your payment is successful</p>
-    }
-</div>
+          </form>
+          {
+            paymentError && <p style={{ color: 'red' }}>{paymentError}</p>
+          }
+          {
+            paymentSuccess && <p style={{ color: 'green' }}>Your payment is successful</p>
+          }
+        </div>
+      </div>
+    </div>
+
   );
 };
 

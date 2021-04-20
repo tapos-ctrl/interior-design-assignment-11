@@ -2,16 +2,13 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { UserContext } from '../../../App';
 import Navbar from '../Header/Navbar/Navbar';
-// import { UserContext } from '../../App';
 import ProcessPayment from '../ProcessPayment/ProcessPayment';
-// import Navbar from '../Share/Navbar/Navbar';
 
 const Shipment = () => {
 
   const { register, handleSubmit, watch, errors } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [shippingData, setShippingData] = useState(null)
-  // console.log(loggedInUser);
 
   const onSubmit = data => {
 setShippingData(data);

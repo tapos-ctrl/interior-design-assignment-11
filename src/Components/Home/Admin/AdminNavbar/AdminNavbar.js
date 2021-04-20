@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import './AdminNavbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFirstOrder } from '@fortawesome/free-brands-svg-icons';
@@ -6,19 +6,6 @@ import { faListOl, faPlus, faTasks, faTrash, faUserPlus } from '@fortawesome/fre
 import { Link } from 'react-router-dom';
 import UserContext from '../../../../App'
 const AdminNavbar = () => {
-
-    const [loggedInUser, setLoggedInUser] = UseContext(UserContext);
-    const [isAdmin, setIsAdmin] = useState(false);
-
-    useEffect(() => {
-        fetch("https://blooming-gorge-51801.herokuapp.com/isAdmin", {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: loggedInUser.email })
-        })
-            .then(res => res.json())
-            .then(data => setIsAdmin(data))
-    }, [])
 
 
     return (
@@ -41,7 +28,6 @@ const AdminNavbar = () => {
                         <Link class="nav-link" to="/orderList"><FontAwesomeIcon className="navbar-icon" icon={faListOl} />Order List</Link>
                     </li>
 
-                   { isAdmin && <div>
                     <li>
                         <Link class="nav-link" to="/addService"><FontAwesomeIcon className="navbar-icon" icon={faPlus} />Add Service</Link>
                     </li>
@@ -53,8 +39,7 @@ const AdminNavbar = () => {
                     </li>
                     <li>
                         <Link class="nav-link" to="/allOrderList"><FontAwesomeIcon className="navbar-icon" icon={faListOl} />All Order List</Link>
-                    </li> 
-                    </div>}             
+                    </li>           
                 </ul>
             </div>
         </div>

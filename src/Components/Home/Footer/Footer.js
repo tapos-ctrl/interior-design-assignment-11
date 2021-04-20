@@ -8,15 +8,15 @@ const Footer = () => {
         <section>
             <div className="footer pt-5 pb-5">
                 <div className="container">
-                    <div className="row">
+                    <div className="row ">
                         <div className="col-md-3">
-                            <div className="about">
+                            <div className="about text-center">
                                 <h2>About</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga odit quod a?</p>
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <div className="services">
+                            <div className="services text-center">
                                 <h2>Services</h2>
                                 <ul>
                                     <li>Places to get lost</li>
@@ -26,7 +26,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <div className="team">
+                            <div className="team text-center">
                                 <h2>Tema Member</h2>
                                 <ul>
                                     <li>Alexender Gary</li>
@@ -36,7 +36,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-md-3 col-sm-12">
-                            <div className="review">
+                            <div className="review text-center">
                                 <h2>Review</h2>
                                 <ul>
                                     <li>Alexender Gary</li>
@@ -47,16 +47,16 @@ const Footer = () => {
                         </div>
                         <div>
                         </div>
-                        <div>
-                        <FontAwesomeIcon className="social-icon" icon={faFacebook} />
-                        <FontAwesomeIcon className="social-icon" icon={faInstagram} />
-                        <FontAwesomeIcon className="social-icon" icon={faTwitter} />
+                        <div className="social-icon-div">
+                            <FontAwesomeIcon className="social-icon" icon={faFacebook} />
+                            <FontAwesomeIcon className="social-icon" icon={faInstagram} />
+                            <FontAwesomeIcon className="social-icon" icon={faTwitter} />
                         </div>
                     </div>
                 </div>
             </div>
             <div className="footer-copyright text-center">
-            <p>© 2016 theme All rights reserved</p>
+                <p>© 2016 theme All rights reserved</p>
             </div>
         </section>
     );

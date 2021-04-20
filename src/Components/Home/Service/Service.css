@@ -2,10 +2,13 @@
     background:rgb(1, 204, 255);
     border-radius: 50px;
     width: 200px;
+    align-items: center;
     outline: none;  
     border: none;
 }
-
+.card-title{
+    text-align:center;
+}
 .service-box:hover{
     transform: scale(-1,1);
     transition: 1s;

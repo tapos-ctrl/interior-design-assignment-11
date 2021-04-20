@@ -1,4 +1,4 @@
-.footer{
+.footer{ 
     background:rgba(19, 19, 19, 0.918);
     color:white;
 }
@@ -15,5 +15,11 @@
 }
 .social-icon{
     font-size:30px;
-    margin:20px  15px 0px 15px;
+    margin:20px 15px;
+    margin-left:40px;
+}
+.social-icon-div{
+    width:300px;
+    margin: 0 auto 0px;
+    
 }

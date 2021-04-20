@@ -1,3 +1,18 @@
-.tb{
-  height: 500px;
+.booking-new{
+  margin-top:150px;
+}
+.booking-body{
+  background:silver;
+  height:606px;
+}
+.check-out-btn{
+  width:150px;
+  height:40px;
+  border-radius:20px;
+  outline:none;
+  border:none;
+  
+}
+Link{
+  text-decoration:none;
 }
